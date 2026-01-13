@@ -1,0 +1,16 @@
+POST http://localhost:8383/api/data
+accept: application/json  
+Content-type: application/json ; charset=UTF-8
+
+{
+    "name": "huda bhai",
+    "password": "cfuck u bro fuck u bro"
+}
+
+###
+
+GET http://localhost:8383/
+
+###
+
+DELETE http://localhost:8383/api/data
