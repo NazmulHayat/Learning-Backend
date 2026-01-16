@@ -1,0 +1,67 @@
+### 
+
+GET http://localhost:8000/
+
+### Registration 
+
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+    "username": "nazmulhayat@gmail.com",
+    "password": "1234567"
+}
+
+### Ok Login
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "username": "nazmulhayat@gmail.com",
+    "password": "1234567"
+}
+
+### Login
+
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "username": "bullshit_check@gmail.com",
+    "password": "more bullshit"
+}
+
+
+### fetch all todos GET /TODOS
+
+
+GET http://localhost:8000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4NTU5NzMxLCJleHAiOjE3Njg2NDYxMzF9.Pl9aPkon4JLpCivBH06rpcn-9SEQlQmscrvxBpHyh3A
+
+
+### creates a new todo POST
+POST http://localhost:8000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4NTU5NzMxLCJleHAiOjE3Njg2NDYxMzF9.Pl9aPkon4JLpCivBH06rpcn-9SEQlQmscrvxBpHyh3A
+Content-Type: application/json
+
+{
+    "task": "Finish coding the projects"
+}
+
+###
+
+PUT http://localhost:8000/todos/id=1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4NTU5NzMxLCJleHAiOjE3Njg2NDYxMzF9.Pl9aPkon4JLpCivBH06rpcn-9SEQlQmscrvxBpHyh3A
+Content-Type: application/json
+
+{
+    "completed": "almost at the end bro, keep it up"
+}
+
+
+### Delete
+
+DELETE http://localhost:8000/todos/id=2
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4NTU5NzMxLCJleHAiOjE3Njg2NDYxMzF9.Pl9aPkon4JLpCivBH06rpcn-9SEQlQmscrvxBpHyh3A
+
+
