@@ -1,0 +1,21 @@
+# use an offical node.js runtime as a parent image (snapshot)
+FROM node:22-alphine
+
+# set the working directory in the contianer
+WORKDIR /app
+
+# copy  package.json and package-lock.json to the working directory
+COPY package*.json .
+
+# install the dependencies
+RUN npm install
+
+# cop the rest of the application code
+COPY . .
+
+# expose the port the app runs on
+EXPOSE 8000
+
+
+#define the command on the app
+CMD ['node', "./src/server.js"]
